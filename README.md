@@ -7,6 +7,6 @@ The code for the proxy and related artifacts is created by running the `wsimport
 
 An `Examine process variables` user task has been added to give the chance to take a peek at the process variables (specifically `greet` should contain `"Hello <customerId>"`).
 
-The example has been designed to interact with [this](https://github.com/DavideRossi/HelloJEEWS) Web Service JEE application and assumes that the service endpoint is http://172.17.0.2:8080/jeews-1.0-SNAPSHOT/WS, change the `WS.wsdl` `service` section accordingly if this is not the case (or, even better, replace WS.wsdl altogether with the WSDL of your running service).
+The example has been designed to interact with [this](https://github.com/DavideRossi/HelloJEEWS) Web Service JEE application and assumes that the service endpoint is http://172.17.0.2:8080/jeews-1.0-SNAPSHOT/WS, change the `WS.wsdl` `service` section accordingly if this is not the case (or, even better, replace `WS.wsdl` altogether with the WSDL of your running service).
 
 License: The source files in this repository are made available under the [Apache License Version 2.0](./LICENSE).
