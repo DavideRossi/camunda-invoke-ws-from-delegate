@@ -20,3 +20,6 @@ hs_err_pid*
 .classpath
 .settings
 .project
+.vscode
+
+/src/main/java/org/camunda/bpm/getstarted/loanapproval/gen

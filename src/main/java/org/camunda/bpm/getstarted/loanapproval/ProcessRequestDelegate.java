@@ -18,6 +18,8 @@ package org.camunda.bpm.getstarted.loanapproval;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.camunda.bpm.getstarted.loanapproval.gen.WS;
+import org.camunda.bpm.getstarted.loanapproval.gen.WSService;
 
 import java.util.logging.Logger;
 
@@ -26,6 +28,10 @@ public class ProcessRequestDelegate implements JavaDelegate {
   private final static Logger LOGGER = Logger.getLogger("LOAN-REQUESTS");
 
   public void execute(DelegateExecution execution) throws Exception {
+    WSService wsService = new WSService();
+    WS ws = wsService.getWSPort();
+    String greet = ws.hello((String)execution.getVariable("customerId"));
+    execution.setVariable("greet", greet);
     LOGGER.info("Processing request by '"+execution.getVariable("customerId")+"'...");
   }
 
